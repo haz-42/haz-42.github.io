@@ -1,10 +1,226 @@
-@page {
-  size: auto;
-  margin: 0mm;
+
+
+
+/* Base Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#title h1 {
-  font-weight: 300;
-  font-size: 18pt;
-  line-height: 1.5;
+body {
+    font-family: Georgia, serif;        
+    font-size: 15px;                    
+    line-height: 1.6;                  
+    color: #2c2c2c;                     
+    background-color: #f5f5f0;          
+    max-width: 960px;                  
+    margin: auto;                      
+    padding: 40px 32px;                
+}
+
+h1 {
+    font-family: Georgia, serif;        
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+}
+
+h2 {
+    font-family: Georgia, serif;        
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2c2c2c;  
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1rem;                    
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: disc;              
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+a {
+    color: #2c5f8a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1a3d5c;
+    text-decoration: underline;
+}
+
+
+/* Name/Description/Contact Section */
+
+.name_description_contact {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px 0;
+    background-color: transparent;
+    
+}
+
+#title {
+    flex: 75%;                           
+    padding: 0;
+}
+
+#title p {
+    font-size: 0.9rem;                  
+    color: #555;
+    margin-top: 10px;
+}
+
+#contact_details {
+    flex: 25%;                            
+    padding: 0;
+}
+
+#contact_details h2 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.contact_info_list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact_info_list li {
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+
+/* Main */
+
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.work_and_projects {
+    flex: 75%;                          
+    padding: 0;
+}
+
+.skills_and_qualifications {
+    flex: 25%;
+    padding: 0px;
+}
+
+
+/* Work and Project Experience */
+
+
+.work_experience,
+.project_experience {
+    margin-bottom: 8px;
+}
+
+.work_experience > div,
+.project_experience > div {
+    margin-bottom: 24px;                
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ddd;     
+}
+
+.experience_date_range {
+    font-size: 0.85rem;
+    color: #888;                        
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.work_description {
+    font-size: 0.92rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.role_achievements {
+    font-size: 0.92rem;
+}
+
+
+
+/* Skills */
+
+
+
+.skills ul {
+    list-style: disc;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.skills li {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+}
+
+
+/* Qualifications */
+
+
+.qualifications_held ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.qualifications_held li {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+}
+
+
+/* Adjustments for printing */
+
+@media print {
+    body {
+        max-width: 100%;
+        padding: 16px;
+        font-size: 8pt;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .work_experience > div,
+    .project_experience > div {
+        page-break-inside: avoid;
+    }
 }
