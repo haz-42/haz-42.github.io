@@ -63,6 +63,7 @@ li {
 a {
     color: #2c5f8a;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
